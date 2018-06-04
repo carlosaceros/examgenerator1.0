@@ -1,5 +1,6 @@
 package vistas;
 
+import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import marvas.Usuario;
 
@@ -12,6 +13,10 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.usuario = new Usuario();
+        this.setSize(new Dimension(800, 600));
+        this.setMinimumSize(new Dimension(800, 600));
+        setLocation(100,50);
+        
     }
 
     /**
@@ -29,61 +34,49 @@ public class Login extends javax.swing.JFrame {
         entrarBoton = new javax.swing.JButton();
         campoNombre = new javax.swing.JTextField();
         tipoUsuarioCombo = new javax.swing.JComboBox<>();
+        imagenFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        nombreEtiqueta.setText("Nombre");
+        campoCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoCodigoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(campoCodigo);
+        campoCodigo.setBounds(410, 410, 230, 30);
 
-        codigoEtiqueta.setText("Código");
+        nombreEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
+        nombreEtiqueta.setText("Nombre:");
+        getContentPane().add(nombreEtiqueta);
+        nombreEtiqueta.setBounds(290, 350, 120, 40);
 
+        codigoEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
+        codigoEtiqueta.setText("Código:");
+        getContentPane().add(codigoEtiqueta);
+        codigoEtiqueta.setBounds(300, 390, 110, 60);
+
+        entrarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
         entrarBoton.setText("Entrar");
         entrarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entrarBotonActionPerformed(evt);
             }
         });
+        getContentPane().add(entrarBoton);
+        entrarBoton.setBounds(410, 480, 150, 50);
+        getContentPane().add(campoNombre);
+        campoNombre.setBounds(410, 360, 230, 30);
 
+        tipoUsuarioCombo.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
         tipoUsuarioCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiante", "Docente" }));
+        getContentPane().add(tipoUsuarioCombo);
+        tipoUsuarioCombo.setBounds(210, 480, 180, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(110, 110, 110)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(codigoEtiqueta)
-                                .addComponent(nombreEtiqueta)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(146, 146, 146)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(tipoUsuarioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(entrarBoton)
-                                    .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(134, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(nombreEtiqueta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(campoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(codigoEtiqueta)
-                .addGap(14, 14, 14)
-                .addComponent(campoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(tipoUsuarioCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(entrarBoton)
-                .addGap(38, 38, 38))
-        );
+        imagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bkmasmejor.jpg"))); // NOI18N
+        getContentPane().add(imagenFondo);
+        imagenFondo.setBounds(0, 0, 950, 595);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -95,7 +88,6 @@ public class Login extends javax.swing.JFrame {
             if (campoNombre.getText() != "") {
 
                 this.usuario = new Usuario(campoNombre.getText(), campoCodigo.getText(), (String) tipoUsuarioCombo.getSelectedItem());
-                JOptionPane.showMessageDialog(null, this.usuario.getNombre() + " - " + this.usuario.getCodigo() + " " + this.usuario.getTipoUsuario());
             } else {
 
                 JOptionPane.showMessageDialog(null, "No has ingresado nombre y/o código, por favor, vuelve a intentarlo", "¡Ha ocurrido algo!", JOptionPane.WARNING_MESSAGE);
@@ -105,6 +97,10 @@ public class Login extends javax.swing.JFrame {
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_entrarBotonActionPerformed
+
+    private void campoCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoCodigoActionPerformed
 
     public Usuario getUsuario() {
         return usuario;
@@ -150,6 +146,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField campoNombre;
     private javax.swing.JLabel codigoEtiqueta;
     private javax.swing.JButton entrarBoton;
+    private javax.swing.JLabel imagenFondo;
     private javax.swing.JLabel nombreEtiqueta;
     private javax.swing.JComboBox<String> tipoUsuarioCombo;
     // End of variables declaration//GEN-END:variables
