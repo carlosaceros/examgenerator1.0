@@ -5,6 +5,8 @@
  */
 package marvas;
 
+import java.util.HashMap;
+
 /**
  *
  * @author cj
@@ -13,6 +15,7 @@ public class Tema {
     
     private int idTema;
     private String nombreTema;
+
 
     public int getIdTema() {
         return idTema;
@@ -35,6 +38,20 @@ public class Tema {
     return foo;
     
     }
+    
+    /*public void listarTemas()
+            
+            {
+                for (Integer name: temas.keySet())
+                    {
+
+                        String key =name.toString();
+                        String value = temas.get(name).toString();  
+                        System.out.println(key + "." + value);  
+
+
+                    }
+            }*/
     
     
     
