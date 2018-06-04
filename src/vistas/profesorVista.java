@@ -27,18 +27,33 @@ public class profesorVista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        bienvenidoEtiqueta = new javax.swing.JLabel();
+        mensajeEtiqueta = new javax.swing.JLabel();
+        agregarBoton = new javax.swing.JButton();
+        crearBoton = new javax.swing.JButton();
+        imagenFondoProfesor = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bienvenidoEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 70)); // NOI18N
+        bienvenidoEtiqueta.setText("¡Bienvenido Profesor!");
+        getContentPane().add(bienvenidoEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
+
+        mensajeEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
+        mensajeEtiqueta.setText("¿Qué desea hacer?");
+        getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
+
+        agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
+        agregarBoton.setText("Agregar Pregunta");
+        getContentPane().add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 323, -1, 60));
+
+        crearBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
+        crearBoton.setText("Crear Examen");
+        getContentPane().add(crearBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 323, 180, 60));
+
+        imagenFondoProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenProfesorVista.png"))); // NOI18N
+        getContentPane().add(imagenFondoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +94,10 @@ public class profesorVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton agregarBoton;
+    private javax.swing.JLabel bienvenidoEtiqueta;
+    private javax.swing.JButton crearBoton;
+    private javax.swing.JLabel imagenFondoProfesor;
+    private javax.swing.JLabel mensajeEtiqueta;
     // End of variables declaration//GEN-END:variables
 }
