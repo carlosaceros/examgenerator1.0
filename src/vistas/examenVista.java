@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vistas;
+import java.awt.Dimension;
 
 /**
  *
@@ -16,6 +12,14 @@ public class examenVista extends javax.swing.JFrame {
      */
     public examenVista() {
         initComponents();
+        this.setSize(new Dimension(800, 600));
+        this.setMinimumSize(new Dimension(800, 600));
+        setLocation(100,50);
+        grupoBotones.clearSelection();
+        grupoBotones.add(opcion1);
+        grupoBotones.add(opcion2);
+        grupoBotones.add(opcion3);
+        grupoBotones.add(opcion4);       
     }
 
     /**
@@ -27,83 +31,46 @@ public class examenVista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        grupoBotones = new javax.swing.ButtonGroup();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        areaTexto = new javax.swing.JTextArea();
+        opcion1 = new javax.swing.JRadioButton();
+        opcion2 = new javax.swing.JRadioButton();
+        opcion3 = new javax.swing.JRadioButton();
+        opcion4 = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+        imagenFondoProfesor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jRadioButton1.setText("jRadioButton1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
+        areaTexto.setColumns(20);
+        areaTexto.setRows(5);
+        jScrollPane1.setViewportView(areaTexto);
 
-        jRadioButton2.setText("jRadioButton1");
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 310, 70));
 
-        jRadioButton5.setText("jRadioButton1");
+        opcion1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
+        getContentPane().add(opcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
 
-        jRadioButton6.setText("jRadioButton1");
+        opcion2.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
+        getContentPane().add(opcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, -1, -1));
 
-        jButton1.setText("jButton1");
+        opcion3.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
+        getContentPane().add(opcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jRadioButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton1))
-                .addGap(95, 95, 95))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(49, 49, 49)
-                    .addComponent(jRadioButton5)
-                    .addContainerGap(258, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
-                .addComponent(jRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton2))
-                .addGap(34, 34, 34)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(173, Short.MAX_VALUE)
-                    .addComponent(jRadioButton5)
-                    .addGap(104, 104, 104)))
-        );
+        opcion4.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
+        getContentPane().add(opcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
+        jLabel1.setText("¡Éxitos en su examen!");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 320, 60));
+
+        imagenFondoProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenFondoExamen.png"))); // NOI18N
+        getContentPane().add(imagenFondoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,11 +108,14 @@ public class examenVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JTextArea areaTexto;
+    private javax.swing.ButtonGroup grupoBotones;
+    private javax.swing.JLabel imagenFondoProfesor;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JRadioButton opcion1;
+    private javax.swing.JRadioButton opcion2;
+    private javax.swing.JRadioButton opcion3;
+    private javax.swing.JRadioButton opcion4;
     // End of variables declaration//GEN-END:variables
 }

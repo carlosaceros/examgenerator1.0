@@ -34,28 +34,25 @@ public class Login extends javax.swing.JFrame {
         entrarBoton = new javax.swing.JButton();
         campoNombre = new javax.swing.JTextField();
         tipoUsuarioCombo = new javax.swing.JComboBox<>();
-        imagenFondo = new javax.swing.JLabel();
+        imagenFondoLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoCodigoActionPerformed(evt);
             }
         });
-        getContentPane().add(campoCodigo);
-        campoCodigo.setBounds(410, 410, 230, 30);
+        getContentPane().add(campoCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 230, 30));
 
         nombreEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
         nombreEtiqueta.setText("Nombre:");
-        getContentPane().add(nombreEtiqueta);
-        nombreEtiqueta.setBounds(290, 350, 120, 40);
+        getContentPane().add(nombreEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 120, 40));
 
         codigoEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
         codigoEtiqueta.setText("Código:");
-        getContentPane().add(codigoEtiqueta);
-        codigoEtiqueta.setBounds(300, 390, 110, 60);
+        getContentPane().add(codigoEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 110, 60));
 
         entrarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
         entrarBoton.setText("Entrar");
@@ -64,19 +61,15 @@ public class Login extends javax.swing.JFrame {
                 entrarBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(entrarBoton);
-        entrarBoton.setBounds(410, 480, 150, 50);
-        getContentPane().add(campoNombre);
-        campoNombre.setBounds(410, 360, 230, 30);
+        getContentPane().add(entrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 150, 50));
+        getContentPane().add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 230, 30));
 
         tipoUsuarioCombo.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
         tipoUsuarioCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudiante", "Docente" }));
-        getContentPane().add(tipoUsuarioCombo);
-        tipoUsuarioCombo.setBounds(210, 480, 180, 50);
+        getContentPane().add(tipoUsuarioCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 180, 50));
 
-        imagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bkmasmejor.jpg"))); // NOI18N
-        getContentPane().add(imagenFondo);
-        imagenFondo.setBounds(0, 0, 950, 595);
+        imagenFondoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bkmasmejor.jpg"))); // NOI18N
+        getContentPane().add(imagenFondoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,7 +139,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField campoNombre;
     private javax.swing.JLabel codigoEtiqueta;
     private javax.swing.JButton entrarBoton;
-    private javax.swing.JLabel imagenFondo;
+    private javax.swing.JLabel imagenFondoLogin;
     private javax.swing.JLabel nombreEtiqueta;
     private javax.swing.JComboBox<String> tipoUsuarioCombo;
     // End of variables declaration//GEN-END:variables
