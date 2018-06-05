@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vistas;
-
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
 
@@ -14,10 +8,10 @@ import javax.swing.JOptionPane;
  */
 public class preguntaVista2 extends javax.swing.JFrame {
 
-    private String r1;
-    private String r2;
-    private String r3;
-    private String r4;
+    static String r1;
+    static String r2;
+    static String r3;
+    static String r4;
     
     /**
      * Creates new form preguntaVista2
@@ -78,8 +72,26 @@ public class preguntaVista2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 220, 40));
+
+        respuesta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respuesta2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 220, 40));
+
+        respuesta3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respuesta3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 220, 40));
+
+        respuesta4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respuesta4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(respuesta4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 220, 40));
 
         texto1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
@@ -144,10 +156,38 @@ public class preguntaVista2 extends javax.swing.JFrame {
 
     private void respuesta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuesta1ActionPerformed
         // TODO add your handling code here:
-        
-        r1 = respuesta1.getText();
+        r1 = this.respuesta1.getText();
     }//GEN-LAST:event_respuesta1ActionPerformed
 
+    private void respuesta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuesta2ActionPerformed
+        // TODO add your handling code here:
+        r2 = this.respuesta2.getText();
+    }//GEN-LAST:event_respuesta2ActionPerformed
+
+    private void respuesta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuesta3ActionPerformed
+        // TODO add your handling code here:
+        r3 = this.respuesta3.getText();
+    }//GEN-LAST:event_respuesta3ActionPerformed
+
+    private void respuesta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuesta4ActionPerformed
+        // TODO add your handling code here:
+        r4 = this.respuesta4.getText();
+    }//GEN-LAST:event_respuesta4ActionPerformed
+
+    public static String getR1() {
+        return r1;
+    }
+    public static String getR2() {
+        return r2;
+    }
+    public static String getR3() {
+        return r3;
+    }
+    public static String getR4() {
+        return r4;
+    }
+
+    
     /**
      * @param args the command line arguments
      */
