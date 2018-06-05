@@ -51,10 +51,20 @@ public class profesorVista extends javax.swing.JFrame {
 
         agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         agregarBoton.setText("Agregar Pregunta");
+        agregarBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 323, -1, 60));
 
         crearBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         crearBoton.setText("Crear Examen");
+        crearBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(crearBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 323, 180, 60));
 
         imagenFondoProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenProfesorVista.png"))); // NOI18N
@@ -63,6 +73,22 @@ public class profesorVista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
+        // TODO add your handling code here:
+        preguntaVista abrir = new preguntaVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_agregarBotonActionPerformed
+
+    private void crearBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearBotonActionPerformed
+        // TODO add your handling code here:
+        crearExamenVista abrir = new crearExamenVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_crearBotonActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */

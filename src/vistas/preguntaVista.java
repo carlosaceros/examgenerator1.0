@@ -32,25 +32,30 @@ public class preguntaVista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        mensajeEtiqueta = new javax.swing.JLabel();
+        seleccionEtiqueta = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
+        agregarBoton = new javax.swing.JButton();
         imagenPregunta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 60)); // NOI18N
-        jLabel1.setText("Agregar pregunta");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
+        mensajeEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 60)); // NOI18N
+        mensajeEtiqueta.setText("Agregar pregunta");
+        getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
-        jLabel2.setText("Seleccionar tema:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
+        seleccionEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
+        seleccionEtiqueta.setText("Seleccionar tema:");
+        getContentPane().add(seleccionEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
 
         jComboBox2.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matemáticas", "Historia", "Física", "Química" }));
         getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, -1, -1));
+
+        agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
+        agregarBoton.setText("Agregar...");
+        getContentPane().add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, -1, -1));
 
         imagenPregunta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         imagenPregunta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenPregunta.png"))); // NOI18N
@@ -95,9 +100,10 @@ public class preguntaVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton agregarBoton;
     private javax.swing.JLabel imagenPregunta;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel mensajeEtiqueta;
+    private javax.swing.JLabel seleccionEtiqueta;
     // End of variables declaration//GEN-END:variables
 }

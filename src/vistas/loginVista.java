@@ -8,9 +8,9 @@ import marvas.Usuario;
  *
  * @author Lozano Carvajal
  */
-public class Login extends javax.swing.JFrame {
+public class loginVista extends javax.swing.JFrame {
 
-    public Login() {
+    public loginVista() {
         initComponents();
         this.usuario = new Usuario();
         this.setSize(new Dimension(800, 600));
@@ -39,6 +39,7 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        campoCodigo.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
         campoCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoCodigoActionPerformed(evt);
@@ -62,6 +63,8 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(entrarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 150, 50));
+
+        campoNombre.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 18)); // NOI18N
         getContentPane().add(campoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 230, 30));
 
         tipoUsuarioCombo.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
@@ -126,21 +129,23 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new loginVista().setVisible(true);
             }
         });
     }
