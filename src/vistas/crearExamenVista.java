@@ -49,6 +49,8 @@ public class crearExamenVista extends javax.swing.JFrame {
         Spinner3 = new javax.swing.JSpinner();
         Spinner4 = new javax.swing.JSpinner();
         crearBoton = new javax.swing.JButton();
+        homeBoton = new javax.swing.JButton();
+        backBoton = new javax.swing.JButton();
         imagenFondoCrear = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -113,11 +115,41 @@ public class crearExamenVista extends javax.swing.JFrame {
         crearBoton.setText("Crear Examen");
         getContentPane().add(crearBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
 
+        homeBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
+        homeBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeBotonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(homeBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+
+        backBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenBack.png"))); // NOI18N
+        backBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBotonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(backBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, -1, -1));
+
         imagenFondoCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenCrearExamen.png"))); // NOI18N
         getContentPane().add(imagenFondoCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBotonActionPerformed
+        // TODO add your handling code here:
+        loginVista abrir = new loginVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_homeBotonActionPerformed
+
+    private void backBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBotonActionPerformed
+        // TODO add your handling code here:
+        profesorVista abrir = new profesorVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_backBotonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,12 +191,14 @@ public class crearExamenVista extends javax.swing.JFrame {
     private javax.swing.JSpinner Spinner2;
     private javax.swing.JSpinner Spinner3;
     private javax.swing.JSpinner Spinner4;
+    private javax.swing.JButton backBoton;
     private javax.swing.JLabel cantidadPreguntasEtiqueta;
     private javax.swing.JCheckBox check1;
     private javax.swing.JCheckBox check2;
     private javax.swing.JCheckBox check3;
     private javax.swing.JCheckBox check4;
     private javax.swing.JButton crearBoton;
+    private javax.swing.JButton homeBoton;
     private javax.swing.JLabel imagenFondoCrear;
     private javax.swing.JLabel materia1;
     private javax.swing.JLabel materia2;

@@ -11,12 +11,12 @@ import java.awt.Dimension;
  *
  * @author Lozano Carvajal
  */
-public class preguntaVista extends javax.swing.JFrame {
+public class temaVista extends javax.swing.JFrame {
 
     /**
      * Creates new form preguntaVista
      */
-    public preguntaVista() {
+    public temaVista() {
         initComponents();
         this.setSize(new Dimension(800, 600));
         this.setMinimumSize(new Dimension(800, 600));
@@ -34,26 +34,22 @@ public class preguntaVista extends javax.swing.JFrame {
 
         mensajeEtiqueta = new javax.swing.JLabel();
         seleccionEtiqueta = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
         agregarBoton = new javax.swing.JButton();
         homeBoton = new javax.swing.JButton();
         backBoton = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         imagenPregunta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mensajeEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 60)); // NOI18N
-        mensajeEtiqueta.setText("Agregar pregunta");
+        mensajeEtiqueta.setText("Agregar tema");
         getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
 
         seleccionEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
-        seleccionEtiqueta.setText("Seleccionar tema:");
+        seleccionEtiqueta.setText("Nombre tema:");
         getContentPane().add(seleccionEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
-
-        jComboBox2.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matemáticas", "Historia", "Física", "Química" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, -1, -1));
 
         agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         agregarBoton.setText("Agregar...");
@@ -79,6 +75,9 @@ public class preguntaVista extends javax.swing.JFrame {
             }
         });
         getContentPane().add(backBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
+
+        jTextField1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 220, -1));
 
         imagenPregunta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         imagenPregunta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenPregunta.png"))); // NOI18N
@@ -125,20 +124,21 @@ public class preguntaVista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(preguntaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(temaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(preguntaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(temaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(preguntaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(temaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(preguntaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(temaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new preguntaVista().setVisible(true);
+                new temaVista().setVisible(true);
             }
         });
     }
@@ -148,7 +148,7 @@ public class preguntaVista extends javax.swing.JFrame {
     private javax.swing.JButton backBoton;
     private javax.swing.JButton homeBoton;
     private javax.swing.JLabel imagenPregunta;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel mensajeEtiqueta;
     private javax.swing.JLabel seleccionEtiqueta;
     // End of variables declaration//GEN-END:variables

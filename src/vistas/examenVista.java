@@ -35,8 +35,8 @@ public class examenVista extends javax.swing.JFrame {
         mensajeEtiqueta = new javax.swing.JLabel();
         comboExamen = new javax.swing.JComboBox<>();
         presentarBoton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        atrasBoton = new javax.swing.JButton();
+        saludoEtiqueta = new javax.swing.JLabel();
+        homeBoton = new javax.swing.JButton();
         imagenFondoExamen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,17 +54,17 @@ public class examenVista extends javax.swing.JFrame {
         presentarBoton.setText("Presentar examen...");
         getContentPane().add(presentarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 70)); // NOI18N
-        jLabel1.setText("¡Bienvenido Estudiante!");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
+        saludoEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 70)); // NOI18N
+        saludoEtiqueta.setText("¡Bienvenido Estudiante!");
+        getContentPane().add(saludoEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
-        atrasBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
-        atrasBoton.addActionListener(new java.awt.event.ActionListener() {
+        homeBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
+        homeBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atrasBotonActionPerformed(evt);
+                homeBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(atrasBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+        getContentPane().add(homeBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         imagenFondoExamen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenFondoExamen.png"))); // NOI18N
         imagenFondoExamen.setText("jLabel1");
@@ -73,12 +73,12 @@ public class examenVista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void atrasBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasBotonActionPerformed
+    private void homeBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBotonActionPerformed
         // TODO add your handling code here:
         loginVista abrir = new loginVista();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_atrasBotonActionPerformed
+    }//GEN-LAST:event_homeBotonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,11 +118,11 @@ public class examenVista extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton atrasBoton;
     private javax.swing.JComboBox<String> comboExamen;
+    private javax.swing.JButton homeBoton;
     private javax.swing.JLabel imagenFondoExamen;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel mensajeEtiqueta;
     private javax.swing.JButton presentarBoton;
+    private javax.swing.JLabel saludoEtiqueta;
     // End of variables declaration//GEN-END:variables
 }

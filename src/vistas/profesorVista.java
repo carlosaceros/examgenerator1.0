@@ -36,6 +36,8 @@ public class profesorVista extends javax.swing.JFrame {
         mensajeEtiqueta = new javax.swing.JLabel();
         agregarBoton = new javax.swing.JButton();
         crearBoton = new javax.swing.JButton();
+        homeBoton = new javax.swing.JButton();
+        temaBoton = new javax.swing.JButton();
         imagenFondoProfesor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,6 +69,23 @@ public class profesorVista extends javax.swing.JFrame {
         });
         getContentPane().add(crearBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 323, 180, 60));
 
+        homeBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
+        homeBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeBotonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(homeBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
+        temaBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
+        temaBoton.setText("Crear Tema");
+        temaBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                temaBotonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(temaBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, -1, -1));
+
         imagenFondoProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenProfesorVista.png"))); // NOI18N
         getContentPane().add(imagenFondoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
@@ -86,6 +105,20 @@ public class profesorVista extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_crearBotonActionPerformed
+
+    private void homeBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBotonActionPerformed
+        // TODO add your handling code here:
+        loginVista abrir = new loginVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_homeBotonActionPerformed
+
+    private void temaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_temaBotonActionPerformed
+        // TODO add your handling code here:
+        temaVista abrir = new temaVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_temaBotonActionPerformed
 
     
     
@@ -128,7 +161,9 @@ public class profesorVista extends javax.swing.JFrame {
     private javax.swing.JButton agregarBoton;
     private javax.swing.JLabel bienvenidoEtiqueta;
     private javax.swing.JButton crearBoton;
+    private javax.swing.JButton homeBoton;
     private javax.swing.JLabel imagenFondoProfesor;
     private javax.swing.JLabel mensajeEtiqueta;
+    private javax.swing.JButton temaBoton;
     // End of variables declaration//GEN-END:variables
 }
