@@ -57,7 +57,5 @@ public class Pregunta {
     public void setRespuestaSeleccionada(int respuestaSeleccionada) {
         this.respuestaSeleccionada = respuestaSeleccionada;
     }
-    
-    
-    
+       
 }

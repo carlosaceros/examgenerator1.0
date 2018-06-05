@@ -8,6 +8,7 @@ import vistas.preguntaVista2;
  */
 public class Respuestas {
     
+    ArrayList<Integer> enteros = new ArrayList();
     String respuesta;
 
     public Respuestas(String respuesta) {

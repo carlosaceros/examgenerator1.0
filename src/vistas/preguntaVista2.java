@@ -45,8 +45,8 @@ public class preguntaVista2 extends javax.swing.JFrame {
         texto2 = new javax.swing.JLabel();
         texto3 = new javax.swing.JLabel();
         texto4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        homeBoton = new javax.swing.JButton();
+        backBoton = new javax.swing.JButton();
         imagenFondoPregunta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -110,21 +110,21 @@ public class preguntaVista2 extends javax.swing.JFrame {
         texto4.setText("Respuesta 4:");
         getContentPane().add(texto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        homeBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
+        homeBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                homeBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
+        getContentPane().add(homeBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenBack.png"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        backBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenBack.png"))); // NOI18N
+        backBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                backBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
+        getContentPane().add(backBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
 
         imagenFondoPregunta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenPregunta.png"))); // NOI18N
         getContentPane().add(imagenFondoPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
@@ -132,19 +132,19 @@ public class preguntaVista2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void homeBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBotonActionPerformed
         // TODO add your handling code here:
         loginVista abrir = new loginVista();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_homeBotonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void backBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBotonActionPerformed
         // TODO add your handling code here:
         preguntaVista abrir = new preguntaVista();
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_backBotonActionPerformed
 
     private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
         // TODO add your handling code here:
@@ -225,9 +225,9 @@ public class preguntaVista2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregarBoton;
+    private javax.swing.JButton backBoton;
+    private javax.swing.JButton homeBoton;
     private javax.swing.JLabel imagenFondoPregunta;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel mensajeEtiqueta;
     private javax.swing.JTextField preguntaTexto;
     private javax.swing.JTextField respuesta1;
