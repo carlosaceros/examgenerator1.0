@@ -48,9 +48,9 @@ public class preguntaVista2 extends javax.swing.JFrame {
         agregarBoton.setText("Agregar");
         getContentPane().add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 490, -1, -1));
 
-        mensajeEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 48)); // NOI18N
+        mensajeEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         mensajeEtiqueta.setText("Agrega la pregunta:");
-        getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
+        getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
         getContentPane().add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 220, 40));
         getContentPane().add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 220, 40));
         getContentPane().add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 220, 40));
