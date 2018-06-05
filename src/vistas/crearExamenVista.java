@@ -6,6 +6,7 @@
 package vistas;
 
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -113,6 +114,11 @@ public class crearExamenVista extends javax.swing.JFrame {
 
         crearBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         crearBoton.setText("Crear Examen");
+        crearBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(crearBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 310, -1, -1));
 
         homeBoton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenHome.png"))); // NOI18N
@@ -150,6 +156,13 @@ public class crearExamenVista extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_backBotonActionPerformed
+
+    private void crearBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearBotonActionPerformed
+        profesorVista abrir = new profesorVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "Se agregó correctamente el examen", "¡Operación exitosa!", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_crearBotonActionPerformed
 
     /**
      * @param args the command line arguments

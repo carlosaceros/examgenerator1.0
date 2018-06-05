@@ -1,5 +1,6 @@
 package vistas;
 import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /**
  *
@@ -19,7 +20,7 @@ public class examenVista2 extends javax.swing.JFrame {
         grupoBotones.add(opcion1);
         grupoBotones.add(opcion2);
         grupoBotones.add(opcion3);
-        grupoBotones.add(opcion4);       
+        grupoBotones.add(opcion4);
     }
 
     /**
@@ -42,7 +43,7 @@ public class examenVista2 extends javax.swing.JFrame {
         anteriorBoton = new javax.swing.JButton();
         siguienteBoton = new javax.swing.JButton();
         imagenPDF = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        terminarBoton = new javax.swing.JButton();
         imagenFondoProfesor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,19 +73,29 @@ public class examenVista2 extends javax.swing.JFrame {
 
         anteriorBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         anteriorBoton.setText("<< Anterior");
+        anteriorBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anteriorBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(anteriorBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
 
         siguienteBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         siguienteBoton.setText("Siguiente >>");
+        siguienteBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                siguienteBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(siguienteBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, -1, -1));
 
         imagenPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenPDF.png"))); // NOI18N
         getContentPane().add(imagenPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, 120, 130));
 
-        jButton1.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
-        jButton1.setText("Terminar");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 120, 30));
+        terminarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
+        terminarBoton.setText("Terminar");
+        terminarBoton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(terminarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 120, 30));
 
         imagenFondoProfesor.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         imagenFondoProfesor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenFondoExamen.png"))); // NOI18N
@@ -93,6 +104,54 @@ public class examenVista2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private int posicion = 0;
+    private void anteriorBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anteriorBotonActionPerformed
+        // TODO add your handling code here:
+        if(posicion == 0){
+            anteriorBoton.setEnabled(false);
+        }
+        
+        if(posicion > -1){
+            posicion--;
+            siguienteBoton.setEnabled(true);
+            //preguntaTexto.setText(p.getPregunta(posicion));
+            ////buttonGroup1.clearSelection(); // sirve para borrar las selecciones de los radio button
+            //radioRespuesta1.setText(auxiliar[0]);
+            //radioRespuesta2.setText(auxiliar[1]);
+            //radioRespuesta3.setText(auxiliar[2]);
+            //radioRespuesta4.setText(auxiliar[3]);
+            //radioRespuesta1.requestFocus();
+        }else{
+            Toolkit.getDefaultToolkit().beep();
+        }
+    }//GEN-LAST:event_anteriorBotonActionPerformed
+
+    private void siguienteBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBotonActionPerformed
+        // TODO add your handling code here:
+        if(posicion == 3){
+            siguienteBoton.setEnabled(false);
+            terminarBoton.setEnabled(true);
+        }
+        
+        if(posicion < 5){
+            anteriorBoton.setEnabled(true);
+            posicion++;
+            //question.setText(p.getPregunta(posicion));
+            //String[] a = r.setRespuestas(posicion);
+            //buttonGroup1.clearSelection(); // sirve para borrar las selecciones de los radio button
+            //opc1.setText(a[0]);
+            //opc2.setText(a[1]);
+            //opc3.setText(a[2]);
+            //opc4.setText(a[3]);
+            //opc1.requestFocus();
+        }else{
+            Toolkit.getDefaultToolkit().beep();
+        }
+        
+    }//GEN-LAST:event_siguienteBotonActionPerformed
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -135,7 +194,6 @@ public class examenVista2 extends javax.swing.JFrame {
     private javax.swing.ButtonGroup grupoBotones;
     private javax.swing.JLabel imagenFondoProfesor;
     private javax.swing.JLabel imagenPDF;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton opcion1;
@@ -143,5 +201,6 @@ public class examenVista2 extends javax.swing.JFrame {
     private javax.swing.JRadioButton opcion3;
     private javax.swing.JRadioButton opcion4;
     private javax.swing.JButton siguienteBoton;
+    private javax.swing.JButton terminarBoton;
     // End of variables declaration//GEN-END:variables
 }
