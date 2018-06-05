@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package marvas;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -13,46 +9,33 @@ import java.util.HashMap;
  */
 public class Tema {
     
-    private int idTema;
-    private String nombreTema;
+    String tituloTema;
+    ArrayList<Pregunta> posiblesPreguntas;
 
-
-    public int getIdTema() {
-        return idTema;
+    public Tema(String tituloTema, ArrayList<Pregunta> posiblesPreguntas) {
+        this.tituloTema = tituloTema;
+        this.posiblesPreguntas = posiblesPreguntas;
     }
 
-    public void setIdTema(int idTema) {
-        this.idTema = idTema;
+    public String getTituloTema() {
+        return tituloTema;
     }
 
-    public String getNombreTema() {
-        return nombreTema;
+    public void setTituloTema(String tituloTema) {
+        this.tituloTema = tituloTema;
     }
 
-    public void setNombreTema(String nombreTema) {
-        this.nombreTema = nombreTema;
+    public ArrayList<Pregunta> getPosiblesPreguntas() {
+        return posiblesPreguntas;
+    }
+
+    public void setPosiblesPreguntas(ArrayList<Pregunta> posiblesPreguntas) {
+        this.posiblesPreguntas = posiblesPreguntas;
     }
     
-    public String toString(){
-    String foo = "ID: "+ this.idTema + ". NOMBRE:" + this.nombreTema; //example
-    return foo;
+    public void agregarPregunta(Pregunta pregunta){
     
+        this.posiblesPreguntas.add(pregunta);
     }
-    
-    /*public void listarTemas()
-            
-            {
-                for (Integer name: temas.keySet())
-                    {
-
-                        String key =name.toString();
-                        String value = temas.get(name).toString();  
-                        System.out.println(key + "." + value);  
-
-
-                    }
-            }*/
-    
-    
     
 }

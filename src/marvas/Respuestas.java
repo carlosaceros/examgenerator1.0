@@ -1,4 +1,5 @@
 package marvas;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 import vistas.preguntaVista2;
 /**
@@ -7,26 +8,20 @@ import vistas.preguntaVista2;
  */
 public class Respuestas {
     
-    String [] respuestas = {
-    
-        preguntaVista2.getR1() + " " + preguntaVista2.getR2() + " " + preguntaVista2.getR3() + " " + preguntaVista2.getR4() 
-    };
-    
-    public String getRespuesta(int posicion){
-        return respuestas[posicion];
+    String respuesta;
+
+    public Respuestas(String respuesta) {
+        this.respuesta = respuesta;
+    }
+
+    public String getRespuesta() {
+        return respuesta;
+    }
+
+    public void setRespuesta(String respuesta) {
+        this.respuesta = respuesta;
     }
     
-    public String [] separar(String cadena, String separador){
-        StringTokenizer token = new StringTokenizer(cadena, separador);
-        
-        String[] a = new String[4];
-        int i = 0;
-        
-        while (token.hasMoreTokens()){
-            a[i] = token.nextToken();
-            i = i+1;
-        }
-        
-        return a;
-    }
+    
+    
 }

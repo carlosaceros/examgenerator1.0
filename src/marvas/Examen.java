@@ -5,6 +5,7 @@
  */
 package marvas;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -13,53 +14,53 @@ import java.util.HashMap;
  */
 public class Examen {
     
-    HashMap< Integer, Pregunta > examen = new HashMap<  >();
-    Pregunta preg = new Pregunta();
-    
-    int id_tema;
-    int cantidad_preguntas;
+    String nombreExamen;
+    ArrayList<Tema> posiblesTemas;
 
-    public HashMap<Integer, Pregunta> getExamen() {
-        return examen;
+    public Examen(String nombreExamen, ArrayList<Tema> posiblesTemas) {
+        this.nombreExamen = nombreExamen;
+        this.posiblesTemas = posiblesTemas;
     }
 
-    public void setExamen(HashMap<Integer, Pregunta> examen) {
-        this.examen = examen;
+    public String getNombreExamen() {
+        return nombreExamen;
     }
 
-    public int getId_tema() {
-        return id_tema;
+    public void setNombreExamen(String nombreExamen) {
+        this.nombreExamen = nombreExamen;
     }
 
-    public void setId_tema(int id_tema) {
-        this.id_tema = id_tema;
+    public ArrayList<Tema> getPosiblesTemas() {
+        return posiblesTemas;
     }
 
-    public int getCantidad_preguntas() {
-        return cantidad_preguntas;
-    }
-
-    public void setCantidad_preguntas(int cantidad_preguntas) {
-        this.cantidad_preguntas = cantidad_preguntas;
+    public void setPosiblesTemas(ArrayList<Tema> posiblesTemas) {
+        this.posiblesTemas = posiblesTemas;
     }
     
+    public void agregarTema(Tema tema){
     
+        this.posiblesTemas.add(tema);
+    }
     
-    public void agregarExamen(int id_tema, Pregunta preg){
+    public double calificarExamen(){
         
-        examen.put(id_tema, preg);
-    }
-    
-    public void mostrarExamen(){
-                for (Integer name: examen.keySet())
-                    {
-
-                        String key =name.toString();
-                        String value = examen.get(name).toString();  
-                        System.out.println(key + "." + value);  
-
-
-                    }
+        int cantidadPreguntas = 0;
+        double calificacion = 0;
+        for(int i = 0; i < this.posiblesTemas.size();i = i + 1){
+        
+            for(int j = 0; j < this.posiblesTemas.get(i).posiblesPreguntas.size(); j = j + 1){
+                
+                Pregunta preguntaIJ = this.posiblesTemas.get(i).posiblesPreguntas.get(j);
+                cantidadPreguntas = cantidadPreguntas + 1;
+                if(preguntaIJ.getRespuestaCorrecta() == preguntaIJ.getRespuestaSeleccionada()){
+                    
+                    calificacion = calificacion + 1;                
+                }
             }
-    
+        }
+        
+        calificacion = calificacion / cantidadPreguntas;
+        return calificacion;
+    }
 }

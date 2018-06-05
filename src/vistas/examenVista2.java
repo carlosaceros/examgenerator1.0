@@ -95,6 +95,11 @@ public class examenVista2 extends javax.swing.JFrame {
         terminarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         terminarBoton.setText("Terminar");
         terminarBoton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        terminarBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                terminarBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(terminarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 120, 30));
 
         imagenFondoProfesor.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
@@ -149,6 +154,10 @@ public class examenVista2 extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_siguienteBotonActionPerformed
+
+    private void terminarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarBotonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_terminarBotonActionPerformed
 
     
     

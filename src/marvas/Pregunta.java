@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package marvas;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,11 +7,20 @@ package marvas;
  */
 public class Pregunta {
     
-    private String enunciado;
-    private String respuestaCorrecta;
-    int idTema;
-
+    String enunciado;
+    ArrayList<Respuestas> posiblesRespuestas;
+    int respuestaCorrecta;
+    int respuestaSeleccionada;
     
+
+    public Pregunta(String enunciado, ArrayList<Respuestas> posiblesRespuestas, int respuestaCorrecta, int respuestaSeleccionada) {
+        this.enunciado = enunciado;
+        this.posiblesRespuestas = posiblesRespuestas;
+        this.respuestaCorrecta = respuestaCorrecta;
+        this.respuestaSeleccionada = respuestaSeleccionada;
+        
+    }
+
     public String getEnunciado() {
         return enunciado;
     }
@@ -24,26 +29,33 @@ public class Pregunta {
         this.enunciado = enunciado;
     }
 
-    public String getRespuestaCorrecta() {
+    public ArrayList<Respuestas> getPosiblesRespuestas() {
+        return posiblesRespuestas;
+    }
+
+    public void setPosiblesRespuestas(ArrayList<Respuestas> posiblesRespuestas) {
+        this.posiblesRespuestas = posiblesRespuestas;
+    }
+    
+    public void agregarRespuesta(Respuestas respuesta){
+        
+        this.posiblesRespuestas.add(respuesta);
+    }
+
+    public int getRespuestaCorrecta() {
         return respuestaCorrecta;
     }
 
-    public void setRespuestaCorrecta(String respuestaCorrecta) {
+    public void setRespuestaCorrecta(int respuestaCorrecta) {
         this.respuestaCorrecta = respuestaCorrecta;
     }
 
-    public int getIdTema() {
-        return idTema;
+    public int getRespuestaSeleccionada() {
+        return respuestaSeleccionada;
     }
 
-    public void setIdTema(int idTema) {
-        this.idTema = idTema;
-    }
-
-    public String toString(){
-    String foo = "Enunciado: "+ this.enunciado + ". \n Respuesta Correcta:" + this.respuestaCorrecta + "\n Pertenece al tema: " + this.idTema +"\n ---------"; //example
-    return foo;
-    
+    public void setRespuestaSeleccionada(int respuestaSeleccionada) {
+        this.respuestaSeleccionada = respuestaSeleccionada;
     }
     
     
