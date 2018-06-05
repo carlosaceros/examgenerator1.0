@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Lozano Carvajal
@@ -16,6 +18,9 @@ public class preguntaVista2 extends javax.swing.JFrame {
      */
     public preguntaVista2() {
         initComponents();
+        this.setSize(new Dimension(800, 600));
+        this.setMinimumSize(new Dimension(800, 600));
+        setLocation(100,50);
     }
 
     /**

@@ -81,6 +81,17 @@ public class Login extends javax.swing.JFrame {
             if (campoNombre.getText() != "") {
 
                 this.usuario = new Usuario(campoNombre.getText(), campoCodigo.getText(), (String) tipoUsuarioCombo.getSelectedItem());
+                if((String) tipoUsuarioCombo.getSelectedItem() == "Estudiante"){
+                
+                    examenVista abrir = new examenVista();
+                    abrir.setVisible(true);
+                    this.setVisible(false);
+                }else{
+                
+                    profesorVista abrir = new profesorVista();
+                    abrir.setVisible(true);
+                    this.setVisible(false);
+                }
             } else {
 
                 JOptionPane.showMessageDialog(null, "No has ingresado nombre y/o código, por favor, vuelve a intentarlo", "¡Ha ocurrido algo!", JOptionPane.WARNING_MESSAGE);
