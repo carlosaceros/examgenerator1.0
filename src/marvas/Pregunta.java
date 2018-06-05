@@ -16,9 +16,6 @@ public class Pregunta {
     int idTema;
 
     
-    
-    
-
     public String getEnunciado() {
         return enunciado;
     }

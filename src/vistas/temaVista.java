@@ -6,6 +6,7 @@
 package vistas;
 
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -102,9 +103,10 @@ public class temaVista extends javax.swing.JFrame {
 
     private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
         // TODO add your handling code here:
-        //preguntaVista2 abrir = new preguntaVista2();
-        //abrir.setVisible(true);
-        //this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "Se agregó correctamente el tema", "¡Operación exitosa!", JOptionPane.INFORMATION_MESSAGE);
+        profesorVista abrir = new profesorVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_agregarBotonActionPerformed
 
     /**

@@ -6,6 +6,7 @@
 package vistas;
 
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,6 +14,11 @@ import java.awt.Dimension;
  */
 public class preguntaVista2 extends javax.swing.JFrame {
 
+    private String r1;
+    private String r2;
+    private String r3;
+    private String r4;
+    
     /**
      * Creates new form preguntaVista2
      */
@@ -21,6 +27,8 @@ public class preguntaVista2 extends javax.swing.JFrame {
         this.setSize(new Dimension(800, 600));
         this.setMinimumSize(new Dimension(800, 600));
         setLocation(100,50);
+        
+        
     }
 
     /**
@@ -53,11 +61,22 @@ public class preguntaVista2 extends javax.swing.JFrame {
 
         agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         agregarBoton.setText("Agregar");
+        agregarBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(agregarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, -1, -1));
 
         mensajeEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         mensajeEtiqueta.setText("Agrega la pregunta:");
         getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+
+        respuesta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respuesta1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(respuesta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 220, 40));
         getContentPane().add(respuesta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 220, 40));
         getContentPane().add(respuesta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 220, 40));
@@ -114,6 +133,20 @@ public class preguntaVista2 extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Se agregó correctamente la pregunta", "¡Operación exitosa!", JOptionPane.INFORMATION_MESSAGE);
+        profesorVista abrir = new profesorVista();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_agregarBotonActionPerformed
+
+    private void respuesta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respuesta1ActionPerformed
+        // TODO add your handling code here:
+        
+        r1 = respuesta1.getText();
+    }//GEN-LAST:event_respuesta1ActionPerformed
 
     /**
      * @param args the command line arguments

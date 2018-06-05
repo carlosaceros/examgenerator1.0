@@ -52,6 +52,11 @@ public class examenVista extends javax.swing.JFrame {
 
         presentarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 24)); // NOI18N
         presentarBoton.setText("Presentar examen...");
+        presentarBoton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                presentarBotonActionPerformed(evt);
+            }
+        });
         getContentPane().add(presentarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, -1));
 
         saludoEtiqueta.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 70)); // NOI18N
@@ -79,6 +84,13 @@ public class examenVista extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_homeBotonActionPerformed
+
+    private void presentarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_presentarBotonActionPerformed
+        // TODO add your handling code here:
+        examenVista2 abrir = new examenVista2();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_presentarBotonActionPerformed
 
     /**
      * @param args the command line arguments

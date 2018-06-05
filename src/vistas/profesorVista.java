@@ -52,7 +52,7 @@ public class profesorVista extends javax.swing.JFrame {
         getContentPane().add(mensajeEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
 
         agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
-        agregarBoton.setText("Agregar Pregunta");
+        agregarBoton.setText("Agregar pregunta");
         agregarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarBotonActionPerformed(evt);
