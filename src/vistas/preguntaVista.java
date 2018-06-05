@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vistas;
-
 import java.awt.Dimension;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -34,7 +29,7 @@ public class preguntaVista extends javax.swing.JFrame {
 
         mensajeEtiqueta = new javax.swing.JLabel();
         seleccionEtiqueta = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        temaCombo = new javax.swing.JComboBox<>();
         agregarBoton = new javax.swing.JButton();
         homeBoton = new javax.swing.JButton();
         backBoton = new javax.swing.JButton();
@@ -51,9 +46,9 @@ public class preguntaVista extends javax.swing.JFrame {
         seleccionEtiqueta.setText("Seleccionar tema:");
         getContentPane().add(seleccionEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
 
-        jComboBox2.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matemáticas", "Historia", "Física", "Química" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, -1, -1));
+        temaCombo.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
+        temaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matemáticas", "Historia", "Física", "Química" }));
+        getContentPane().add(temaCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, -1, -1));
 
         agregarBoton.setFont(new java.awt.Font("Gill Sans MT Condensed", 0, 36)); // NOI18N
         agregarBoton.setText("Agregar...");
@@ -103,9 +98,14 @@ public class preguntaVista extends javax.swing.JFrame {
 
     private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
         // TODO add your handling code here:
-        preguntaVista2 abrir = new preguntaVista2();
-        abrir.setVisible(true);
-        this.setVisible(false);
+        if((String) temaCombo.getSelectedItem() == ""){     
+            JOptionPane.showMessageDialog(null, "No ha seleccionado ningun tema", "¡Ha ocurrido algo!", JOptionPane.WARNING_MESSAGE);
+        }else{
+            preguntaVista2 abrir = new preguntaVista2();
+            abrir.setVisible(true);
+            this.setVisible(false);
+            //JOptionPane.showMessageDialog(null, "Se agregó correctamente la pregunta", "¡Proceso exitoso!", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_agregarBotonActionPerformed
 
     /**
@@ -148,8 +148,8 @@ public class preguntaVista extends javax.swing.JFrame {
     private javax.swing.JButton backBoton;
     private javax.swing.JButton homeBoton;
     private javax.swing.JLabel imagenPregunta;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel mensajeEtiqueta;
     private javax.swing.JLabel seleccionEtiqueta;
+    private javax.swing.JComboBox<String> temaCombo;
     // End of variables declaration//GEN-END:variables
 }

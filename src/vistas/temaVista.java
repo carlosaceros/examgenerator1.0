@@ -102,9 +102,9 @@ public class temaVista extends javax.swing.JFrame {
 
     private void agregarBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarBotonActionPerformed
         // TODO add your handling code here:
-        preguntaVista2 abrir = new preguntaVista2();
-        abrir.setVisible(true);
-        this.setVisible(false);
+        //preguntaVista2 abrir = new preguntaVista2();
+        //abrir.setVisible(true);
+        //this.setVisible(false);
     }//GEN-LAST:event_agregarBotonActionPerformed
 
     /**
